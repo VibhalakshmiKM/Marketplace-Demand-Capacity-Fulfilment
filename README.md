@@ -67,7 +67,7 @@ Use a phased approach to the ₹25 crore planning scenario:
 - Monitor weekly: Weighted forecast accuracy and bias, stockout exposure, hub capacity utilization, on-time delivery rate, and CSAT or support resolution time.
 Final budget allocations and expected savings should be based on validated scenario assumptions and documented calculations; they are not stated here because no verified allocation amounts or realized savings have been provided.
 
-# How to Explore the Project
+## How to Explore the Project
 1. Review the Excel workbook to understand data-quality decisions and analytical preparation.
 2. Run the SQL scripts against a compatible MySQL database after checking table and column names.
 3. Open the Power BI .pbix file to explore the five dashboard pages. Refreshing may require access to the source database and updating connection settings.
