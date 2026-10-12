@@ -43,13 +43,7 @@ The SQL work includes:
 - Capacity utilization by hub and month.
 - Delivery delay and on-time delivery metrics.
 - Customer-level ticket volume, CSAT, and resolution-time analysis.
-- Reusable KPI views:
-  - vw_demand_kpis
-  - vw_inventory_kpis
-  - vw_capacity_kpis
-  - vw_delivery_kpis
-  - vw_customer_cx_kpis
-  - vw_rider_kpis (if included in the final SQL scripts)
+- Reusable KPI views.
 
 # Power BI Dashboards
 1. COO Peak-Season Scorecard — Executive view of demand, stockouts, forecast demand, and delivery performance.
