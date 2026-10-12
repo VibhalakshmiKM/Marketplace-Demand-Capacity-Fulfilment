@@ -1,7 +1,8 @@
-Marketplace Demand, Capacity & Fulfilment Analytics
-Project Overview
+##  Marketplace Demand, Capacity & Fulfilment Analytics
+# Project Overview
 This project analyzes an e-commerce marketplace's demand, inventory availability, hub capacity, delivery operations, and customer experience to support peak-season planning. The goal is to help business teams make evidence-based operational decisions while managing forecast uncertainty and capacity costs.
-Business Objectives
+
+# Business Objectives
 - Identify demand patterns by city, product category, customer segment, channel, and time period.
 - Evaluate forecast accuracy, forecast error, and forecast bias.
 - Analyze inventory availability and stockout exposure.
@@ -9,17 +10,32 @@ Business Objectives
 - Examine rider utilization, delivery delays, and on-time performance.
 - Analyze support tickets, customer satisfaction (CSAT), and resolution time.
 - Support a phased, evidence-based peak-season investment recommendation for the ₹25 crore budget.
-Tools & Technologies
+
+# Tools & Technologies
 - Excel: Data-quality audit, data cleaning, analytical model, and operational analysis.
 - MySQL: Data joins, aggregations, CTEs, window functions, forecast calculations, and reusable KPI views.
 - Power BI: Interactive dashboards, KPI cards, charts, matrix, donut chart, and slicers.
-Project Workflow
+
+# Project Workflow
 1. Data Quality & Preparation: Audited source datasets and documented cleaning decisions for missing, duplicate, invalid, and inconsistent values.
 2. Excel Analysis: Prepared an analytical model and analyzed demand, forecasts, inventory, capacity, delivery performance, and customer support.
 3. SQL Analysis: Created analytical queries and reusable views to summarize demand, inventory, capacity, delivery, and customer-experience metrics.
 4. Power BI Reporting: Connected the analytical data to Power BI and built five dashboard pages.
 5. Business Recommendation: Used the analysis to frame peak-season investment priorities, operational risks, and weekly monitoring metrics.
-SQL Analysis
+
+# Excel Analysis
+Excel was used as the first stage of the analysis to audit data quality, document cleaning decisions, and prepare data for downstream SQL analysis and Power BI reporting.
+The Excel work covered:
+- Data-quality audit: Identified missing values, duplicate records, invalid values, and inconsistent formats across the source datasets.
+- Data cleaning: Reviewed duplicates, date formats, blank fields, and negative quantities. Cleaning decisions were documented instead of automatically replacing every missing value with zero.
+- Analytical model: Organized important fields from the related datasets into an analytical model to support joined analysis and reporting.
+- Demand and forecast analysis: Compared actual demand with available forecasts and documented missing forecast records separately.
+- Inventory and stockout analysis: Summarized demand units, stockout days, closing stock, and estimated demand exposure. Estimated exposure was treated as an estimate, not confirmed lost sales.
+- Hub capacity analysis: Compared forecast orders with monthly hub capacity and reviewed capacity utilization under a peak-demand scenario.
+- Delivery and rider analysis: Examined delivery delays, on-time performance, and available rider utilization information.
+- Budget scenario and recommendation: Used the operational analysis to frame investment priorities for inventory, hub capacity, riders/workforce, forecasting and analytics, and customer experience.
+
+# SQL Analysis
 The SQL work includes:
 - Demand ranking by city and product category.
 - Forecast error, absolute error, forecast accuracy, and forecast bias.
@@ -34,13 +50,15 @@ The SQL work includes:
   - vw_delivery_kpis
   - vw_customer_cx_kpis
   - vw_rider_kpis (if included in the final SQL scripts)
-Power BI Dashboards
+
+# Power BI Dashboards
 1. COO Peak-Season Scorecard — Executive view of demand, stockouts, forecast demand, and delivery performance.
 2. Demand & Forecasting — Actual versus forecast demand, forecast accuracy, forecast error/bias, and demand trends.
 3. Inventory & Availability — Demand units, stockout days, closing stock, and inventory risk by hub.
 4. Hub, Rider & Delivery Operations — Capacity utilization, rider utilization, delayed deliveries, and on-time delivery performance.
 5. Customer Experience & Operational Risk — Support tickets, customer satisfaction, resolution time, matrix analysis, and ticket share by segment.
-Key Business Considerations
+
+# Key Business Considerations
 - Forecast uncertainty should not automatically lead to permanent capacity expansion.
 - Distinguish demand shortage, inventory shortage, and capacity shortage before recommending an intervention.
 - Estimated demand exposure is not the same as confirmed lost sales unless lost orders are directly observed.
@@ -54,14 +72,8 @@ Use a phased approach to the ₹25 crore planning scenario:
 - Test: Temporary hub capacity, flexible staffing, and forecasting improvements in selected locations before scaling.
 - Monitor weekly: Weighted forecast accuracy and bias, stockout exposure, hub capacity utilization, on-time delivery rate, and CSAT or support resolution time.
 Final budget allocations and expected savings should be based on validated scenario assumptions and documented calculations; they are not stated here because no verified allocation amounts or realized savings have been provided.
-Repository Structure
-marketplace-demand-capacity-analytics/
-├── README.md
-├── excel/                # Excel audit and analytical workbooks
-├── sql/                  # SQL analysis scripts and KPI views
-├── powerbi/              # Power BI .pbix file
 
-How to Explore the Project
+# How to Explore the Project
 1. Review the Excel workbook to understand data-quality decisions and analytical preparation.
 2. Run the SQL scripts against a compatible MySQL database after checking table and column names.
 3. Open the Power BI .pbix file to explore the five dashboard pages. Refreshing may require access to the source database and updating connection settings.
